@@ -11,3 +11,10 @@ spring:
           searchLocations: classpath:offline-repository/
 server:
   port: 8001
+
+# Control which Actuator web endpoints are exposed.
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,bus-refresh
